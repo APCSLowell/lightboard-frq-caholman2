@@ -28,12 +28,12 @@ public class LightBoard
   {
     int count = 0;
     for(int r=0; r<lights.length; r++){
-      if (lights[r][col] == true)
+      if (lights[r][col])
         count++;
     }
     if (lights[row][col] && count%2 == 0)
       return false;
-    if (lights[row][col] && count%3 == 0)
+    if (!lights[row][col] && count%3 == 0)
       return true;
     return lights[row][col];
    
